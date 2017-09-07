@@ -1,66 +1,84 @@
 @import '../variables.scss';
 
-.section-line {
-    position: relative;
-    width: 300px;
+.section-image {
   
-    &:after {
-      content:'';
-      display: block;
-      width: 300px;
-      height: 4px;
-      position: absolute;
-      background: $accent-color;
-    }
-  }
-  
-  .image-shadow {
-    content:"";  
+  img {
     display: block;
-    width: 343px;
-    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.section-line {
+  position: relative;
+  width: 300px;
+
+  &:after {
+    content:'';
+    display: block;
+    width: 300px;
+    height: 4px;
     position: absolute;
-    background: rgba(0,0,0,0.2);
-    filter : blur(10px);
-    z-index: -1;
+    background: $accent-color;
+    z-index: 2;
   }
+}
   
-  .section-image-right {
-    
-    &.section-line {
-      &:after {
-        top: 45px;
-        left: -30px;
-      }
-    }
-  
-    .image-mask {
-      clip-path: polygon(0 0, 65% 0, 100% 100%, 35% 100%);
-    }
-  
-    .image-shadow {
-      top: 5px;
-      left: 80px;
-      transform: skew(24deg, 0deg);
-    }
-  
+.image-shadow {
+  content:"";  
+  display: block;
+  width: 343px;
+  height: 100%;
+  max-height: 430px;
+  position: absolute;
+  background: rgba(0,0,0,0.2);
+  filter : blur(10px);
+  z-index: 0;
+}
+
+.section-image-right {
+  position: relative;
+  right: -5%;
+
+  img {
+    width: 700px;
   }
-  
-  .section-image-left {
-    &.section-line {
-      &:after {
-        top: 85px;
-        right: -230px;
-      }
-    }
-  
-    .image-mask {
-      clip-path: polygon(35% 0, 100% 0, 65% 100%, 0 100%);
-    }
-  
-    .image-shadow {
-      top: 5px;
-      left: 105px;
-      transform: skew(-24deg, 0deg);
+
+  &.section-line {
+    &:after {
+      top: 45px;
+      left: -30px;
     }
   }
+
+  .image-mask {
+    clip-path: polygon(0 0, 65% 0, 100% 100%, 35% 100%);
+  }
+
+  .image-shadow {
+    max-height: 560px;
+    top: 15px;
+    left: 110px;
+    transform: skew(24deg, 0deg);
+  }
+
+}
+
+.section-image-left {
+  &.section-line {
+    &:after {
+      top: 85px;
+      right: -230px;
+    }
+  }
+
+  .image-mask {
+    clip-path: polygon(35% 0, 100% 0, 65% 100%, 0 100%);
+  }
+
+  .image-shadow {
+    top: 5px;
+    left: 105px;
+    transform: skew(-24deg, 0deg);
+  }
+}

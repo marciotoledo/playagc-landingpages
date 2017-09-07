@@ -1,0 +1,14 @@
+@import '../variables.scss';
+
+.section-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $bg-color-light;
+    overflow: hidden;
+
+    .column {
+        width: 40%;
+    }
+
+}
