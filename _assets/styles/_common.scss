@@ -9,6 +9,11 @@ body {
   font-size: 100%;
   color: $text-color;
   background: white;
+  overflow-x: hidden;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 .section {
