@@ -3,6 +3,8 @@ const gulp = require('gulp'),
       postcss = require('gulp-postcss'),
       autoprefixer = require('autoprefixer'),
       cssnano = require('cssnano'),
+      babel = require('gulp-babel');
+      uglify = require('gulp-uglify');
       image = require('gulp-image'),
       del = require('del'),
       runSequence = require('run-sequence'),
@@ -41,17 +43,31 @@ gulp.task('sass',function () {
     .pipe(livereload())
 });
 
+gulp.task('js-libs', function () {
+  return gulp.src('./_assets/scripts/libs/*.js')
+      .pipe(gulp.dest('./public/assets/js/libs'))
+});
+
+gulp.task('js', function () {
+  return gulp.src('./_assets/scripts/*.js')
+      .pipe(babel())
+      .pipe(uglify())
+      .pipe(gulp.dest('./public/assets/js'))
+      .pipe(livereload())
+});
+
 gulp.task('build', function(done) {
-    runSequence('clean', 'pages', 'sass', function() {
+    runSequence('clean', 'pages', 'image', 'sass', 'js-libs', 'js', function() {
         done();
     });
 });
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch('./_assets/styles/**/*.scss', ['sass']);
-  gulp.watch('./_assets/images/*', ['image']);
   gulp.watch('./_pages/*.html', ['pages']);
+  gulp.watch('./_assets/images/*', ['image']);
+  gulp.watch('./_assets/styles/**/*.scss', ['sass']);
+  gulp.watch('./_assets/scripts/*.js', ['js']);
 });
 
 gulp.task('default', ['build', 'watch']);
