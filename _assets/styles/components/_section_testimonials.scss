@@ -1,0 +1,45 @@
+@import '../variables.scss';
+
+.section-testimonials {
+    min-height: 500px;
+    background: $bg-color-dark url('../img/bg-testimonials.jpg') no-repeat center center;
+    background-size: cover;
+
+    .js-testimonials {
+        display: flex;
+        flex-direction: column;
+        
+        width:50%;
+        margin: 0 auto;
+
+        .slick-dots {
+            display: flex;
+            justify-content: center;
+
+            button {
+                width:60px;
+                height: 12px;
+                margin: 0 6px;
+                text-indent: -9999px;
+                background-color: transparentize($bg-color-light, 0.6);
+                border-radius: 6px;
+                border: none;
+                overflow: hidden;
+                cursor: pointer;
+                transition: $transition;
+
+                &:hover {
+                    background-color: $bg-color-light;
+                }
+
+            }
+
+            .slick-active {
+
+                button {
+                    background-color: $accent-color;
+                }
+            }
+        }
+    }
+}
