@@ -1,0 +1,29 @@
+@import '../variables.scss';
+
+.section-moneyback {
+    background: $bg-color-dark;
+
+    img {
+        width: 240px;
+        height: auto;
+    }
+
+    .column {
+        width: 40%;
+        margin: 0 auto 20px auto;
+    }
+
+    h2 {
+        &:after {
+            content:'';
+            display: block;
+            width: 150px;
+            height: 4px;
+            margin: 40px auto 35px auto;
+            position: relative;
+            background: $accent-color;
+            z-index: 2;
+        }
+    }
+    
+}
