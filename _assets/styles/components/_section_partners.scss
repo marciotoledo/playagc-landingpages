@@ -1,0 +1,51 @@
+@import '../variables.scss';
+
+.partners {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        width: 27%;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: $brand-color;
+
+        &:nth-child(1) {
+            background-color: #00523d;
+        }
+        &:nth-child(2) {
+            background-color: #00795f;
+        }
+        &:nth-child(3) {
+            background-color: #c32525;
+        }
+
+        img {
+            width: 60%;
+            height: auto;
+            margin: 0 auto;
+            transition: $transition;
+        }
+
+        &:hover img {
+            width: 65%;
+        }
+    }
+}
+
+.partners-subtitle {
+    font-size: 1.4em;
+}
+
+.partners-logo {
+    width: 180px;
+    height: auto;
+    margin: 20px;
+}
