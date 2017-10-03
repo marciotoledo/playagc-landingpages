@@ -1,7 +1,6 @@
 @import '../variables.scss';
 
 .section-image {
-  
   img {
     display: block;
     position: relative;
@@ -16,7 +15,7 @@
   &:after {
     content:'';
     display: block;
-    width: 300px;
+    width: 350px;
     height: 4px;
     position: absolute;
     background: $accent-color;
@@ -25,13 +24,13 @@
 }
   
 .image-shadow {
-  content:"";  
+  content:'';  
   display: block;
   width: 343px;
   height: 100%;
   max-height: 430px;
   position: absolute;
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.15);
   filter : blur(10px);
   z-index: 0;
 }
@@ -47,7 +46,7 @@
   &.section-line {
     &:after {
       top: 45px;
-      left: -30px;
+      left: -40px;
     }
   }
 
@@ -65,10 +64,17 @@
 }
 
 .section-image-left {
+  position: relative;
+  left: -30%;
+
+  img {
+    width: 700px;
+  }
+
   &.section-line {
     &:after {
-      top: 85px;
-      right: -230px;
+      top: 115px;
+      left: 360px;
     }
   }
 
@@ -77,8 +83,9 @@
   }
 
   .image-shadow {
-    top: 5px;
-    left: 105px;
+    max-height: 560px;
+    top: 20px;
+    left: 250px;
     transform: skew(-24deg, 0deg);
   }
 }

@@ -11,7 +11,7 @@
     font-size: 0.9em;
     background-color: transparent;
     z-index: 10;
-    transition: all .5s ease;
+    transition: $transition;
 
     &.is-scrolling {
         height: 70px;
@@ -25,7 +25,7 @@
     .logo {
         width: 120px;
         height: auto;
-        transition: all .5s ease;
+        transition: $transition;
     }
 
     .phone strong {
