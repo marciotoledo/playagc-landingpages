@@ -56,8 +56,13 @@ gulp.task('js', function () {
       .pipe(livereload())
 });
 
+gulp.task('fonts', function () {
+  return gulp.src('./_assets/fonts/*')
+      .pipe(gulp.dest('./public/assets/font'))
+});
+
 gulp.task('build', function(done) {
-    runSequence('clean', 'pages', 'image', 'sass', 'js-libs', 'js', function() {
+    runSequence('clean', 'pages', 'image', 'sass', 'js-libs', 'js', 'fonts', function() {
         done();
     });
 });
