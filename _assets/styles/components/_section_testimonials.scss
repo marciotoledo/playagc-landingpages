@@ -1,20 +1,44 @@
 @import '../variables.scss';
 
 .section-testimonials {
-    min-height: 500px;
+    padding-bottom: 50px;
     background: $bg-color-dark url('../img/bg-testimonials.jpg') no-repeat center center;
     background-size: cover;
 
-    .js-testimonials {
+    .testimonials {
         display: flex;
         flex-direction: column;
-        
-        width:50%;
-        margin: 0 auto;
+        justify-content: space-between;
+        width:55%;
+        min-height: 320px;
+        margin: 0 auto;        
+
+        blockquote {
+            margin: 0;
+            padding: 30px 50px;
+            font-size: 1.8em;
+            font-weight: 300;
+            font-style: italic;
+            letter-spacing: -1px;
+            background:
+                url('../img/icon-quote-open.svg') top left no-repeat,
+                url('../img/icon-quote-close.svg') bottom right no-repeat;
+            background-size: 50px;
+        }
+
+        .name {
+            display:block;
+            margin-bottom: 5px;
+            font-family: $font-condensed;
+            font-size: 1.4em;
+            color: $accent-color;
+            text-transform: uppercase;
+        }
 
         .slick-dots {
             display: flex;
             justify-content: center;
+            margin-top: 30px;
 
             button {
                 width:60px;
