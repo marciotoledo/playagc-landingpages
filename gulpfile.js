@@ -5,6 +5,7 @@ const gulp = require('gulp'),
       cssnano = require('cssnano'),
       babel = require('gulp-babel');
       uglify = require('gulp-uglify');
+      concat = require('gulp-concat');
       image = require('gulp-image'),
       del = require('del'),
       runSequence = require('run-sequence'),
@@ -44,14 +45,24 @@ gulp.task('sass',function () {
 });
 
 gulp.task('js-libs', function () {
-  return gulp.src('./_assets/scripts/libs/*.js')
-      .pipe(gulp.dest('./public/assets/js/libs'))
+  
+  return gulp.src
+    ([
+      './_assets/scripts/libs/jquery-3.2.1.min.js',
+      './_assets/scripts/libs/aos.js',
+      './_assets/scripts/libs/slick.min.js'
+    ])
+    .pipe(concat('libs.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./public/assets/js'));
+
 });
 
 gulp.task('js', function () {
   return gulp.src('./_assets/scripts/*.js')
       .pipe(babel())
       .pipe(uglify())
+      .pipe(concat('main.js'))
       .pipe(gulp.dest('./public/assets/js'))
       .pipe(livereload())
 });

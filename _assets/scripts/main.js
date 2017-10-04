@@ -6,6 +6,12 @@ $(window).on('scroll', function() {
     }
 });
 
+AOS.init({
+    easing: 'ease-out',
+    duration: 1000,
+    offset: 300
+});
+
 $('.js-testimonials').slick({
     dots: true,
     arrows: false,
