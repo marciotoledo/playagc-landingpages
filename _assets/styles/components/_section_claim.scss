@@ -1,0 +1,17 @@
+@import '../variables.scss';
+
+.section-claim {
+    background: url('../img/bg-claim.jpg') no-repeat center right;
+    background-size: 80%;
+
+    .wrap {
+        width: 45%;
+        margin: 0 auto 20px auto;
+    }
+
+    h3 {
+        font-size: 1.4em;
+        color: $text-light;
+    }
+   
+}
