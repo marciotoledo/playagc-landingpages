@@ -63,9 +63,35 @@
 
 }
 
-// Responsive
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .section-features {
+        h2 {
+            width: 80%;
+        }
+
+        .features {
+            width: 80%;
+            margin: 0px auto;
+            flex-direction: column;
+    
+            li {
+                margin-bottom: 30px;
+                padding: 0;
+                border: 0 !important;
+
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+    }
+}    
+
+// Responsive - Tablet
 @media (max-width: 991px) {
     .golf-ball {
         display: none;
     }
+
  }

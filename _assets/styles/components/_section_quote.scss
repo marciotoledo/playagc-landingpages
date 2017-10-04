@@ -30,3 +30,25 @@
         font-weight: 700;
     }
 }
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .section-quote {
+        flex-direction: column;
+        text-align: center;
+
+        img {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-size: 1.8em;
+        }
+
+        .name {
+            font-size: 1.1em;
+            text-indent: 0;
+        }
+    }
+}

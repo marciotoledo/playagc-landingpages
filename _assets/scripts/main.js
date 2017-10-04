@@ -1,5 +1,5 @@
 $(window).on('scroll', function() {
-    if ($(window).scrollTop() > 500) {
+    if ($(window).scrollTop() > 150) {
         $('.header').addClass('is-scrolling');
     } else {
         $('.header').removeClass('is-scrolling');
@@ -9,7 +9,8 @@ $(window).on('scroll', function() {
 AOS.init({
     easing: 'ease-out',
     duration: 1000,
-    offset: 300
+    offset: 300,
+    disable: 'mobile'
 });
 
 $('.js-testimonials').slick({

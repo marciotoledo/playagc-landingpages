@@ -36,3 +36,16 @@
         vertical-align: middle;
     }
 }
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .header {
+        height: 80px;
+    }
+    .phone {
+        text-align: right;
+    }
+    .phone strong {
+        display: block;
+    }
+}

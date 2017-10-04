@@ -15,3 +15,27 @@
     }
    
 }
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .section-claim {
+        background-position: right 65px;
+        background-size: 120%;
+
+        .wrap {
+            width: auto;
+        }
+
+        h2 {
+            width: 90%;
+            text-align: left;
+        }
+        h3 {
+            width: 60%;
+            text-align: left;
+        }
+        p {
+            text-align: left;
+        }
+    }
+}

@@ -67,3 +67,17 @@
         }
     }
 }
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .section-testimonials {
+        .testimonials {
+            width: 100%;
+
+            blockquote {
+                font-size: 1.2em;
+                background-size: 40px;
+            }
+        }
+    }
+}

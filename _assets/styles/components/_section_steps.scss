@@ -2,7 +2,7 @@
 
 .section-steps {
     background: $bg-color-dark url('../img/bg-steps.jpg') no-repeat center center;
-    background-size: cover;    
+    background-size: cover;
 }
 
 .steps {
@@ -59,5 +59,21 @@
         font-size: 3.3em;
         letter-spacing: -2px;
         color: $accent-color;
+    }
+}
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .steps {
+        flex-direction: column;
+        align-items: center;
+
+        .item {
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-size: 2.6em;
+        }
     }
 }

@@ -27,3 +27,17 @@
     }
     
 }
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+   .section-moneyback {
+       .wrap {
+           width: auto;
+       }
+
+       img {
+           width: 180px;
+       }
+   } 
+    
+}

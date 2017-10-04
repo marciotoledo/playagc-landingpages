@@ -25,3 +25,21 @@
         }
     }
 }
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .section-hero {
+        min-height: 600px;
+        padding-top: 200px;
+        justify-content: space-between;
+        
+        h1 {
+            font-size: 1.6em;
+            letter-spacing: -1px;
+
+            strong {
+                letter-spacing: -4px;
+            }
+        }
+    }
+}
