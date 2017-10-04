@@ -2,7 +2,7 @@
   "name": "playagc-landingpages",
   "version": "1.0.0",
   "description": "Landing Pages for AGC",
-  "main": "public/index.html",
+  "main": "public/default.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,15 +10,21 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.3",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
     "cssnano": "^3.10.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-htmlmin": "^3.0.0",
+    "gulp-image": "^3.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-postcss": "^7.0.0",
     "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
     "run-sequence": "^2.1.0"
-  },
-  "dependencies": {}
+  }
 }

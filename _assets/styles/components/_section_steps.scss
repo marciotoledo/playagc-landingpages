@@ -1,0 +1,79 @@
+@import '../variables.scss';
+
+.section-steps {
+    background: $bg-color-dark url('../img/bg-steps.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .item {
+        position: relative;
+        width: 16%;
+        min-width: 240px;
+        margin: 0 2%;
+    }
+
+    .number {
+        position: relative;
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        font-family: $font-condensed;
+        font-size: 2.6em;
+        line-height: 100px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            left:0;
+            top:0;
+            display: block;
+            width: inherit;
+            height: inherit;
+            background: url('../img/shape-steps.svg') no-repeat center center;
+            background-size: 100%;
+
+            animation-name: spin;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            @keyframes spin { 
+                from { 
+                    transform: rotate(0deg); 
+                } to { 
+                    transform: rotate(360deg); 
+                }
+            }
+        }
+    }
+
+    h3 {
+        margin: 20px 0;  
+        font-size: 3.3em;
+        letter-spacing: -2px;
+        color: $accent-color;
+    }
+}
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .steps {
+        flex-direction: column;
+        align-items: center;
+
+        .item {
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-size: 2.6em;
+        }
+    }
+}

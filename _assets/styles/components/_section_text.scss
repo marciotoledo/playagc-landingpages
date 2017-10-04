@@ -1,0 +1,25 @@
+@import '../variables.scss';
+
+.section-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $bg-color-light;
+    overflow: hidden;
+
+    .column {
+        width: 40%;
+        margin: 0 10%;
+    }
+
+}
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .section-text {
+        .column {
+            width: auto;
+            margin: 0 5%;
+        }    
+    }
+}

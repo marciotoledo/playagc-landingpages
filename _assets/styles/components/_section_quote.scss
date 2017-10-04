@@ -1,0 +1,54 @@
+@import '../variables.scss';
+
+.section-quote {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: $bg-color-medium;
+
+    img {
+        width:175px;
+        height: 175px;
+        margin-right: 30px;
+        border-radius: 50%;
+    }
+
+    .quote {
+        display: block;
+        font-size: 2.5em;
+        font-weight: 300;
+        letter-spacing: -1.5px;
+    }
+
+    .name {
+        display: block;
+        text-indent: 18px;
+        font-size:1.5em;
+        font-weight: 700;
+    }
+}
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .section-quote {
+        flex-direction: column;
+        text-align: center;
+
+        img {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            font-size: 1.8em;
+        }
+
+        .name {
+            font-size: 1.1em;
+            text-indent: 0;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import '../variables.scss';
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    background-color: transparent;
+    z-index: 10;
+    transition: $transition;
+
+    &.is-scrolling {
+        height: 70px;
+        background-color: transparentize($brand-color, 0.1);
+
+        .logo {
+            width: 100px;
+        }
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+        transition: $transition;
+    }
+
+    .phone strong {
+        margin-left: 5px;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 700;
+        font-size: 1.4em;
+        vertical-align: middle;
+    }
+}
+
+// Responsive - Mobile
+@media (max-width: 575px) {
+    .header {
+        height: 80px;
+    }
+    .phone {
+        text-align: right;
+    }
+    .phone strong {
+        display: block;
+    }
+}
