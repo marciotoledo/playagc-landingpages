@@ -1,0 +1,1 @@
+$(window).on("scroll",function(){$(window).scrollTop()>150?$(".header").addClass("is-scrolling"):$(".header").removeClass("is-scrolling")}),AOS.init({easing:"ease-out",duration:1e3,offset:300,disable:"mobile"}),$(".js-testimonials").slick({dots:!0,arrows:!1,infinite:!0,autoplay:!0,speed:500,fade:!0,cssEase:"linear"});
